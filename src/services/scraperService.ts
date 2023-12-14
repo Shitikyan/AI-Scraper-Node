@@ -1,10 +1,8 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 
-export async function scrapeQuotes(): Promise<string[]> {
+export async function scrapeQuotes(url: string): Promise<string[]> {
   try {
-    const url = 'https://solicy.net'
-
     const response = await axios.get(url)
     const $ = cheerio.load(response.data)
 
