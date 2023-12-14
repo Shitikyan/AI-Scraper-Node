@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
 export async function scrapeQuotes(): Promise<string[]> {
   try {
-    const url = 'https://github.com/acheong08/ChatGPT/discussions/649'
+    const url = 'https://solicy.net'
 
     const response = await axios.get(url)
     const $ = cheerio.load(response.data)
